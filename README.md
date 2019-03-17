@@ -1,2 +1,2 @@
 # DzieSieDzieje
-Server application for Events App
+Backend for Events App
