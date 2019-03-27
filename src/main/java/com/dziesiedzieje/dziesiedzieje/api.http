@@ -1,0 +1,6 @@
+GET http://localhost:8080/events/all
+Content-Type: application/json
+###
+GET http://localhost:8080/events/add?name=name&longitude=longitude&latitude=latitude
+Content-Type: application/json
+###
