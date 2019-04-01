@@ -1,12 +1,9 @@
 package com.dziesiedzieje.dziesiedzieje.entity;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.Data;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "PLACE")
@@ -36,6 +33,9 @@ public class PlaceEntity {
 
     @Column(name = "LONGITUDE", length = 20)
     private String longitude;
+
+    @OneToOne(mappedBy = "place")
+    private EventEntity event;
 
     public Long getId() {
         return id;
@@ -99,5 +99,13 @@ public class PlaceEntity {
 
     public void setLongitude(String longitude) {
         this.longitude = longitude;
+    }
+
+    public EventEntity getEvent() {
+        return event;
+    }
+
+    public void setEvent(EventEntity event) {
+        this.event = event;
     }
 }

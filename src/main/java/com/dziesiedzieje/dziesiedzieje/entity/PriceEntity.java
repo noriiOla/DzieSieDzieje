@@ -1,12 +1,10 @@
 package com.dziesiedzieje.dziesiedzieje.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.Data;
 
+import javax.persistence.*;
+
+@Data
 @Entity
 @Table(name = "PRICE")
 public class PriceEntity {
@@ -26,6 +24,9 @@ public class PriceEntity {
 
     @Column(name = "MAX", length = 10, nullable = false)
     private int max;
+
+    @OneToOne(mappedBy = "price")
+    private EventEntity event;
 
     public Long getId() {
         return id;
@@ -65,6 +66,14 @@ public class PriceEntity {
 
     public void setMax(int max) {
         this.max = max;
+    }
+
+    public EventEntity getEvent() {
+        return event;
+    }
+
+    public void setEvent(EventEntity event) {
+        this.event = event;
     }
 }
 
