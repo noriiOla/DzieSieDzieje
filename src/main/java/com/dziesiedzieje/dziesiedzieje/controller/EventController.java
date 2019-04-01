@@ -16,7 +16,7 @@ public class EventController {
     @Autowired
     private EventRepository eventRepository;
 
-    @GetMapping(path="/add") // Map ONLY GET Requests
+    @GetMapping(path = "/add")
     public @ResponseBody
     String addNewUser(@RequestParam String name,
                       @RequestParam String longitude,
@@ -30,9 +30,9 @@ public class EventController {
         return "Saved";
     }
 
-    @GetMapping(path="/all")
-    public @ResponseBody Iterable<Event> getAllUsers() {
-        // This returns a JSON or XML with the users
+    @GetMapping(path = "/all")
+    public @ResponseBody
+    Iterable<Event> getAllUsers() {
         return eventRepository.findAll();
     }
 }
