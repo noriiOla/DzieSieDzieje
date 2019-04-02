@@ -3,6 +3,8 @@ package com.dziesiedzieje.dziesiedzieje.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Collection;
+import java.util.Set;
 
 @Data
 @Entity
@@ -25,8 +27,8 @@ public class PriceEntity {
     @Column(name = "MAX", length = 10, nullable = false)
     private int max;
 
-    @OneToOne(mappedBy = "price")
-    private EventEntity event;
+    @OneToMany(mappedBy = "price")
+    private Collection<EventEntity> events;
 
     public Long getId() {
         return id;
@@ -68,12 +70,12 @@ public class PriceEntity {
         this.max = max;
     }
 
-    public EventEntity getEvent() {
-        return event;
+    public Collection<EventEntity> getEvents() {
+        return events;
     }
 
-    public void setEvent(EventEntity event) {
-        this.event = event;
+    public void setEvents(Collection<EventEntity> events) {
+        this.events = events;
     }
 }
 

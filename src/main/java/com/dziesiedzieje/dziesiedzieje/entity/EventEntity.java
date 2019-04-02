@@ -11,7 +11,7 @@ public class EventEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String id;
 
     @Column(name = "NAME", length = 45, nullable = false)
     private String name;
@@ -28,25 +28,25 @@ public class EventEntity {
     @Column(name = "PROMOTER", length = 45)
     private String promoter;
 
-    @OneToOne(
+    @ManyToOne(
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
     @JoinColumn(name = "PRICE_ID")
     private PriceEntity price;
 
-    @OneToOne(
+    @ManyToOne(
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
     @JoinColumn(name = "PLACE_ID")
     private PlaceEntity place;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

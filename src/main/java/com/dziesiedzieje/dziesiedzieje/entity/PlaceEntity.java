@@ -1,9 +1,8 @@
 package com.dziesiedzieje.dziesiedzieje.entity;
 
 
-import lombok.Data;
-
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 @Table(name = "PLACE")
@@ -34,8 +33,8 @@ public class PlaceEntity {
     @Column(name = "LONGITUDE", length = 20)
     private String longitude;
 
-    @OneToOne(mappedBy = "place")
-    private EventEntity event;
+    @OneToMany(mappedBy = "place")
+    private Collection<EventEntity> events;
 
     public Long getId() {
         return id;
@@ -101,11 +100,11 @@ public class PlaceEntity {
         this.longitude = longitude;
     }
 
-    public EventEntity getEvent() {
-        return event;
+    public Collection<EventEntity> getEvents() {
+        return events;
     }
 
-    public void setEvent(EventEntity event) {
-        this.event = event;
+    public void setEvents(Collection<EventEntity> events) {
+        this.events = events;
     }
 }

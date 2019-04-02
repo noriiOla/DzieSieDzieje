@@ -26,7 +26,7 @@ CREATE TABLE `dziesiedzieje`.`price` (
   PRIMARY KEY (`id`));
   
 CREATE TABLE `dziesiedzieje`.`event` (
-  `id` INT NOT NULL,
+  `id` VARCHAR(15) NOT NULL,
   `name` VARCHAR(45) NOT NULL,
   `image` VARCHAR(300) NULL,
   `date` DATETIME NULL,
@@ -48,12 +48,11 @@ CREATE TABLE `dziesiedzieje`.`event` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
-  
-  
+
   CREATE TABLE `dziesiedzieje`.`user_event_interested` (
   `id` INT NOT NULL,
   `user_id` INT NOT NULL,
-  `event_id` INT NOT NULL,
+  `event_id` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_event_id_idx` (`event_id` ASC) VISIBLE,
   INDEX `fk_user_id_idx` (`user_id` ASC) VISIBLE,
@@ -68,12 +67,12 @@ CREATE TABLE `dziesiedzieje`.`event` (
     REFERENCES `dziesiedzieje`.`user_profile` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
-	
-	
+
+
 	CREATE TABLE `dziesiedzieje`.`user_event_not_interested` (
   `id` INT NOT NULL,
   `user_id` INT NOT NULL,
-  `event_id` INT NOT NULL,
+  `event_id` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_event_id_not_idx` (`event_id` ASC) VISIBLE,
   INDEX `fk_user_id_not_idx` (`user_id` ASC) VISIBLE,
