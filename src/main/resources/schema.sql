@@ -1,12 +1,16 @@
-CREATE TABLE `dziesiedzieje`.`user_profile` (
-  `id` INT NOT NULL,
-  `name` VARCHAR(45) NULL,
-  `surname` VARCHAR(45) NULL,
+  CREATE TABLE `dziesiedzieje`.`user_profile` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `surname` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
   `date_of_birth` DATE NULL,
+  `email` VARCHAR(60) NULL,
+  `provider` VARCHAR(15) NULL,
+  `role` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`));
 
   CREATE TABLE `dziesiedzieje`.`place` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `postal_code` VARCHAR(6) NULL,
   `adress` VARCHAR(100) NOT NULL,
@@ -18,7 +22,7 @@ CREATE TABLE `dziesiedzieje`.`user_profile` (
 DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE `dziesiedzieje`.`price` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `type` VARCHAR(45) NULL,
   `currency` VARCHAR(45) NOT NULL,
   `min` INT(10) NULL,
@@ -50,7 +54,7 @@ CREATE TABLE `dziesiedzieje`.`event` (
 
 
   CREATE TABLE `dziesiedzieje`.`user_event_interested` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT NOT NULL,
   `event_id` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`),
@@ -70,7 +74,7 @@ CREATE TABLE `dziesiedzieje`.`event` (
 
 
 	CREATE TABLE `dziesiedzieje`.`user_event_not_interested` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `user_id` INT NOT NULL,
   `event_id` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`),

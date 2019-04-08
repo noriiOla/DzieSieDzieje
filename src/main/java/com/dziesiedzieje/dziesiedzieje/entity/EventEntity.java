@@ -1,7 +1,5 @@
 package com.dziesiedzieje.dziesiedzieje.entity;
 
-import lombok.Data;
-
 import javax.persistence.*;
 import java.sql.Date;
 
@@ -10,7 +8,7 @@ import java.sql.Date;
 public class EventEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
     @Column(name = "NAME", length = 45, nullable = false)
@@ -29,15 +27,17 @@ public class EventEntity {
     private String promoter;
 
     @ManyToOne(
+            optional = false,
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JoinColumn(name = "PRICE_ID")
     private PriceEntity price;
 
     @ManyToOne(
+            optional = false,
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     @JoinColumn(name = "PLACE_ID")
     private PlaceEntity place;

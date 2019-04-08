@@ -1,7 +1,7 @@
 package com.dziesiedzieje.dziesiedzieje.repository;
 
 import com.dziesiedzieje.dziesiedzieje.entity.PriceEntity;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PriceRepository extends CrudRepository<PriceEntity, Long> {
+public interface PriceRepository extends JpaRepository<PriceEntity, Long> {
 }
