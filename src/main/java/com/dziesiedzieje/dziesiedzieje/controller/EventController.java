@@ -1,7 +1,7 @@
 package com.dziesiedzieje.dziesiedzieje.controller;
 
-import com.dziesiedzieje.dziesiedzieje.entity.EventEntity;
-import com.dziesiedzieje.dziesiedzieje.repository.EventRepository;
+import com.dziesiedzieje.dziesiedzieje.mapper.dts.EventDts;
+import com.dziesiedzieje.dziesiedzieje.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,11 +13,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class EventController {
 
     @Autowired
-    private EventRepository eventRepository;
+    EventService eventService;
+
 
     @GetMapping(path = "/all")
     public @ResponseBody
-    Iterable<EventEntity> getAllUsers() {
-        return eventRepository.findAll();
+    Iterable<EventDts> getAllUsers() {
+
+        eventService.addDummyEvent();
+
+        return eventService.findAllEvents();
     }
 }

@@ -12,7 +12,7 @@ import java.util.Set;
 public class PriceEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "TYPE", length = 45, nullable = false)
@@ -27,8 +27,8 @@ public class PriceEntity {
     @Column(name = "MAX", length = 10, nullable = false)
     private int max;
 
-    @OneToMany(mappedBy = "price")
-    private Collection<EventEntity> events;
+/*    @OneToMany(mappedBy = "price")
+    private Collection<EventEntity> events;*/
 
     public Long getId() {
         return id;
@@ -70,12 +70,12 @@ public class PriceEntity {
         this.max = max;
     }
 
-    public Collection<EventEntity> getEvents() {
+/*    public Collection<EventEntity> getEvents() {
         return events;
     }
 
     public void setEvents(Collection<EventEntity> events) {
         this.events = events;
-    }
+    }*/
 }
 

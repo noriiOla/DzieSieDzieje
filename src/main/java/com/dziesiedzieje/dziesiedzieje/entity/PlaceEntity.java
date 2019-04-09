@@ -9,7 +9,7 @@ import java.util.Collection;
 public class PlaceEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(length = 45, nullable = false)
@@ -33,8 +33,8 @@ public class PlaceEntity {
     @Column(name = "LONGITUDE", length = 20)
     private String longitude;
 
-    @OneToMany(mappedBy = "place")
-    private Collection<EventEntity> events;
+/*    @OneToMany(mappedBy = "place")
+    private Collection<EventEntity> events;*/
 
     public Long getId() {
         return id;
@@ -100,11 +100,11 @@ public class PlaceEntity {
         this.longitude = longitude;
     }
 
-    public Collection<EventEntity> getEvents() {
+/*    public Collection<EventEntity> getEvents() {
         return events;
     }
 
     public void setEvents(Collection<EventEntity> events) {
         this.events = events;
-    }
+    }*/
 }

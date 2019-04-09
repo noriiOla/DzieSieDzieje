@@ -4,6 +4,9 @@ Content-Type: application/json
 GET http://localhost:8080/prices/all
 Content-Type: application/json
 ###
+GET http://localhost:8080/places/all
+Content-Type: application/json
+###
 GET http://localhost:8080/users/all
 Content-Type: application/json
 ###

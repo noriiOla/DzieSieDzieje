@@ -1,14 +1,13 @@
 package com.dziesiedzieje.dziesiedzieje.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 @Table(name = "EVENT")
 public class EventEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
     @Column(name = "NAME", length = 45, nullable = false)
