@@ -8,5 +8,9 @@ public interface EventService {
 
     List<EventDts> findAllEvents();
 
+    void save(EventDts eventDts);
+
+    EventDts findOneById(String id);
+
     void addDummyEvent();
 }

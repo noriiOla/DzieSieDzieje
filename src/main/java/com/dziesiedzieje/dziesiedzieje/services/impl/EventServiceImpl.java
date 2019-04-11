@@ -41,6 +41,23 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
+    public void save(EventDts eventDts) {
+        EventEntity eventEntity = mapper.eventDtsToEventEntity(eventDts);
+        if (eventEntity.getPlace() != null) {
+            placeRepository.save(eventEntity.getPlace());
+        }
+        if (eventEntity.getPrice() != null) {
+            priceRepository.save(eventEntity.getPrice());
+        }
+        eventRepository.save(eventEntity);
+    }
+
+    @Override
+    public EventDts findOneById(String id) {
+        return mapper.eventEntityToEventDts(eventRepository.findOneById(id));
+    }
+
+    @Override
     public void addDummyEvent() {
         EventEntity eventEntity = new EventEntity();
         eventEntity.setId("b34bjsakmad");

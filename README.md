@@ -22,11 +22,13 @@ mysql> create user 'db_user'@'%' identified by 'ThePassword'; -- Creates the use
 mysql> grant all on dziesiedzieje.* to 'springuser'@'%'; -- Gives all the privileges to the new user on the newly created database
 ```
 Next run schema.sql script to create database schema.
+
 ####Tomcat configuration 
 ```
 mvn clean install
 ```
 Next add new Tomcat configuration, configure port as **8080**, set JRE and in Deployment tab add **war:exploded**.
+
 ####Examples of simple requests   
 Open **api.http** file and run requests.  
 NOTE: Only Intellij fetcher. 

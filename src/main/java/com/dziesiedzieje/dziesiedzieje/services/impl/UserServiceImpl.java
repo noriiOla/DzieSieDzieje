@@ -43,4 +43,9 @@ public class UserServiceImpl implements UserService {
         userEntity.setUserRole(UserRole.user);
         userRepository.save(userEntity);
     }
+
+    @Override
+    public UserDto findOneById(Long id) {
+        return mapper.userEntityToUserDto(userRepository.findOneById(id));
+    }
 }

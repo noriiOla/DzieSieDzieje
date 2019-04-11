@@ -10,4 +10,6 @@ public interface UserService {
     List<UserDto> findAllUsers();
 
     void addDummyUser();
+
+    UserDto findOneById(Long id);
 }

@@ -1,12 +1,19 @@
-GET http://localhost:8080/events/all
+### GET ALL EVENTS
+GET http://localhost:8080/event/all
 Content-Type: application/json
-###
-GET http://localhost:8080/prices/all
+### GET EVENT BY ID
+GET http://localhost:8080/event/b34bjsakmad
 Content-Type: application/json
-###
-GET http://localhost:8080/places/all
+### GET ALL PRICES
+GET http://localhost:8080/price/all
 Content-Type: application/json
-###
-GET http://localhost:8080/users/all
+### GET ALL PLACES
+GET http://localhost:8080/place/all
+Content-Type: application/json
+### GET ALL USERS
+GET http://localhost:8081/user/all
+Content-Type: application/json
+### GET USER BY ID
+GET http://localhost:8080/user/3
 Content-Type: application/json
 ###
