@@ -18,27 +18,27 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    Long id;
 
     @Column(name = "NAME", nullable = false)
-    private String name;
+    String name;
 
     @Column(name = "SURNAME", nullable = false)
-    private String surname;
+    String surname;
 
     @Email
     @Column(name = "EMAIL")
-    private String email;
+    String email;
 
     @Column(name = "PASSWORD", nullable = false)
-    private String password;
+    String password;
 
     @NotNull
     @Enumerated(EnumType.STRING)
-    private AuthProvider provider;
+    AuthProvider provider;
 
     @Column(name = "ROLE", nullable = false)
-    private UserRole userRole;
+    UserRole userRole;
 
     public Long getId() {
         return id;

@@ -8,22 +8,22 @@ import java.util.Date;
 public class EventEntity {
 
     @Id
-    private String id;
+    String id;
 
     @Column(name = "NAME", length = 45, nullable = false)
-    private String name;
+    String name;
 
     @Column(name = "IMAGE")
-    private String image;
+    String image;
 
     @Column(name = "DATE")
-    private Date date;
+    Date date;
 
     @Column(name = "TYPE", length = 45)
-    private String type;
+    String type;
 
     @Column(name = "PROMOTER", length = 45)
-    private String promoter;
+    String promoter;
 
     @ManyToOne(
             optional = false,
@@ -31,7 +31,7 @@ public class EventEntity {
             fetch = FetchType.EAGER
     )
     @JoinColumn(name = "PRICE_ID")
-    private PriceEntity price;
+    PriceEntity price;
 
     @ManyToOne(
             optional = false,
@@ -39,7 +39,7 @@ public class EventEntity {
             fetch = FetchType.EAGER
     )
     @JoinColumn(name = "PLACE_ID")
-    private PlaceEntity place;
+    PlaceEntity place;
 
     public String getId() {
         return id;

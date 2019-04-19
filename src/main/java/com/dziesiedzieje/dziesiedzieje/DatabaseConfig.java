@@ -6,7 +6,6 @@ package com.dziesiedzieje.dziesiedzieje;
 //import javax.sql.DataSource;
 //
 //@Configuration
-//
 //public class DatabaseConfig {
 //
 //    @Value("${spring.datasource.url}")

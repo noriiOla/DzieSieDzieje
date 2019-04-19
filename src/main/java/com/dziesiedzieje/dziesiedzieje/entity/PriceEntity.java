@@ -13,19 +13,19 @@ public class PriceEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    Long id;
 
     @Column(name = "TYPE", length = 45, nullable = false)
-    private String type;
+    String type;
 
     @Column(name = "CURRENCY", length = 45, nullable = false)
-    private String currency;
+    String currency;
 
     @Column(name = "MIN", length = 10)
-    private int min;
+    int min;
 
     @Column(name = "MAX", length = 10, nullable = false)
-    private int max;
+    int max;
 
 /*    @OneToMany(mappedBy = "price")
     private Collection<EventEntity> events;*/
@@ -34,7 +34,7 @@ public class PriceEntity {
         return id;
     }
 
-    public void setId(Long id) {
+    public  void setId(Long id) {
         this.id = id;
     }
 

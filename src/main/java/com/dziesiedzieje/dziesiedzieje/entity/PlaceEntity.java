@@ -10,28 +10,28 @@ public class PlaceEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    Long id;
 
     @Column(length = 45, nullable = false)
-    private String name;
+    String name;
 
     @Column(name = "POSTAL_CODE", length = 6)
-    private String postalCode;
+    String postalCode;
 
     @Column(name = "ADRESS", length = 100, nullable = false)
-    private String address;
+    String address;
 
     @Column(name = "COUNTRY", length = 45, nullable = false)
-    private String country;
+    String country;
 
     @Column(name = "CITY", length = 45, nullable = false)
-    private String city;
+    String city;
 
     @Column(name = "LATITUDE", length = 20)
-    private String latitude;
+    String latitude;
 
     @Column(name = "LONGITUDE", length = 20)
-    private String longitude;
+    String longitude;
 
 /*    @OneToMany(mappedBy = "place")
     private Collection<EventEntity> events;*/
