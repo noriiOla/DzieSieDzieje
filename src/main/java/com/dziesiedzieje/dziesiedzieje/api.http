@@ -1,19 +1,19 @@
 ### GET ALL EVENTS
-GET http://localhost:8080/event/all
+GET https://dziesiedziejev2.herokuapp.com/event/all
 Content-Type: application/json
 ### GET EVENT BY ID
-GET http://localhost:8080/event/b34bjsakmad
+GET http://dziesiedziejev2.herokuapp.com/event/b34bjsakmad
 Content-Type: application/json
 ### GET ALL PRICES
-GET http://localhost:8080/price/all
+GET http://dziesiedziejev2.herokuapp.com/price/all
 Content-Type: application/json
 ### GET ALL PLACES
-GET http://localhost:8080/place/all
+GET http://dziesiedziejev2.herokuapp.com/place/all
 Content-Type: application/json
 ### GET ALL USERS
-GET http://localhost:8081/user/all
+GET http://dziesiedziejev2.herokuapp.com/user/all
 Content-Type: application/json
 ### GET USER BY ID
-GET http://localhost:8080/user/3
+GET http://dziesiedziejev2.herokuapp.com/user/3
 Content-Type: application/json
 ###
