@@ -15,7 +15,7 @@ import java.util.stream.StreamSupport;
 @Service
 public class PlaceServiceImpl implements PlaceService {
 
-    @Autowired
+//    @Autowired
     private PlaceRepository placeRepository;
 
     private PlaceEntityPlaceDtoMapper mapper =

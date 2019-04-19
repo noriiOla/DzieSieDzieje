@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/user")
 public class UserController {
 
-    @Autowired
+//    @Autowired
     UserService userService;
 
     @GetMapping(path = "/all")

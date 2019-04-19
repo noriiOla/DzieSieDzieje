@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class PriceController {
 
 
-    @Autowired
+//    @Autowired
     PriceService priceService;
 
     @GetMapping(path = "/all")

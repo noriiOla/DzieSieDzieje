@@ -19,7 +19,7 @@ import java.util.stream.StreamSupport;
 public class UserServiceImpl implements UserService {
 
 
-    @Autowired
+//    @Autowired
     private UserRepository userRepository;
 
     private UserEntityUserDtoMapper mapper

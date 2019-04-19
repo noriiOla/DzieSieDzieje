@@ -15,7 +15,7 @@ import java.util.stream.StreamSupport;
 @Service
 public class PriceServiceImpl implements PriceService {
 
-    @Autowired
+//    @Autowired
     private PriceRepository priceRepository;
 
     private PriceEntityPriceDtoMapper mapper

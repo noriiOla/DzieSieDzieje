@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class PlaceController {
 
 
-    @Autowired
+//    @Autowired
     PlaceService placeService;
 
     @GetMapping(path = "/all")

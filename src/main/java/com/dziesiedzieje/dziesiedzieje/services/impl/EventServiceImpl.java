@@ -21,13 +21,13 @@ import java.util.stream.StreamSupport;
 @Service
 public class EventServiceImpl implements EventService {
 
-    @Autowired
+//    @Autowired
     private EventRepository eventRepository;
 
-    @Autowired
+//    @Autowired
     private PriceRepository priceRepository;
 
-    @Autowired
+//    @Autowired
     private PlaceRepository placeRepository;
 
     private EventEntityEventDtsMapper mapper =
